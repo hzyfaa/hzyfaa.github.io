@@ -122,11 +122,17 @@ header h1 {
 }
 
 #artifact-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "a b";
+    justify-items: center;
     align-items: center;
+    height: 100%;
+
     width: 100%;
     background: white;
     padding: 10px;
@@ -135,17 +141,98 @@ header h1 {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.demo-container>video {
+    grid-area: b;
+}
+
+#artifact-heading {
+    text-align: center;
+    grid-area: a;
+    margin-right: 10px;
+}
+
+.demo-container {
+    background-color: #080404;
+    padding: 10px;
+}
+
+.enh-video {
+    padding: 10px 0;
+}
+
+.enh-video>p {
+    font-weight: 900;
+}
+
 .enh-container {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #fff;
     width: 100%;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
+    margin: 10px 0px;
+    padding: 10px 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.enh-reflection {
+    padding: 15px 0;
+}
+
+.enh-header {
+    margin-top: 10px;
+    border-bottom: #080404;
+    border-width: 2px;
+}
+
+.enh-description {
+    margin: 5px auto;
+    width: 100%;
+}
+
+.enh-description>p {
+    text-align: center;
+}
+
+.enh-outcomes {
+    text-align: left;
+    padding: 5px;
+}
+
+.enh-outcomes>p {
+    margin: 5px;
+}
+
+.demo-container,
+.outcomes {
+    display: inline;
+}
+
+
+
+
+.demo-outcomes-container {
+    display: flex;
+    gap: 20px;
+}
+
+.demo-container {
+    flex: 1;
+}
+
+.outcomes {
+    flex: 1;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    gap: 5px;
+    background-color: #2196F3;
+    padding: 5px;
 }
 
 .text-area {
@@ -175,6 +262,13 @@ header h1 {
 .video-area {
     flex: 1;
     padding-left: 20px;
+}
+
+/* Video Styling */
+.enh-video video {
+    width: 320px;
+    height: 240px;
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {

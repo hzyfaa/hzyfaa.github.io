@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Huzayfa's ePortfolio</title>
 </head>
 
 <body>
+
+    <!-- Header Section -->
     <header>
         <h1>Hi! I'm Huzayfa</h1>
         <nav>
@@ -21,7 +24,8 @@
         </nav>
     </header>
 
-    <div id="overview-container">
+    <!-- Artifact Overview Section -->
+    <section id="overview-container">
         <div class="text-area">
             <h2>Artifact Overview</h2>
             <p>
@@ -34,75 +38,210 @@
             </p>
         </div>
 
+        <!-- Vertical Divider -->
         <div class="divider"></div>
 
+        <!-- Video Section -->
         <div class="video-area">
             <h2>Code Review Video</h2>
             <iframe title="vimeo-player" src="https://player.vimeo.com/video/1059612772?h=ea5995d03d" width="100%"
                 height="360" frameborder="0" allowfullscreen></iframe>
         </div>
-    </div>
+    </section>
 
-    <div id="artifact-container">
-        <h2>Original Work</h2>
-        <a href="https://github.com/hzyfaa/Full-Stack" target="_blank" rel="noopener noreferrer"
-            title="Original Artifact">View on GitHub</a>
-        <video width="320" height="240" controls>
-            <source src="./demos/origDemo.mp4" type="video/mp4">
-            **Not Supported**
-        </video>
-    </div>
+    <!-- Original Work Section -->
+    <section id="artifact-container">
+        <div id="artifact-heading">
+            <h2>Original Work</h2>
+            <a href="https://github.com/hzyfaa/Full-Stack" target="_blank" rel="noopener noreferrer"
+                title="Original Artifact">View on GitHub</a>
+        </div>
+        <div class="demo-container">
+            <video width="320" height="240" controls>
+                <source src="./demos/origDemo.mp4" type="video/mp4">
+                **Not Supported**
+            </video>
+        </div>
+    </section>
 
-    <!-- Enh 1 -->
-    <div class="enh-container">
-        <h2>Software Engineering and Design</h2>
+    <!-- Enhancement 1 Section: Software Engineering and Design -->
+    <section class="enh-container">
+        <h2 class="enh-header">Software Engineering and Design</h2>
+        <a href="<!-- INSERT GITHUB LINK -->" class="github-link" target="_blank">View on GitHub</a>
 
-        <div class="narrative">
-            <p>Clients can only view preloaded trips. To make the app more practical, I implemented an external API that
-                could be used to retrieve travel data such as flights, hotels, etc. Additionally, some UI features were
-                improved for a more modern and engaging look. Finally, the user should be able to search for locations
-                using a
-                search functionality.
-            </p>
+        <div class="enh-grid">
+            <!-- Description Block -->
+            <div class="enh-description">
+                <p>
+                    Clients can only view preloaded trips. To make the app more practical, I implemented an external API
+                    that could be used to retrieve travel data such as flights, hotels, etc. Additionally, some UI
+                    features
+                    were improved for a more modern and engaging look. The user should be able to search for locations
+                    using a search functionality. Finally, I implemented routes and pages for user authentication.
+                </p>
+            </div>
 
-            <h3>Outcomes:</h3>
-            <ul>
-                <li>
-                    Design, develop, and deliver professional-quality oral, written, and visual communications that are
-                    coherent, technically sound, and appropriately adapted to specific audiences and contexts.
-                </li>
+            <!-- Outcomes Block -->
+            <div class="enh-outcomes">
+                <h3>Outcomes:</h3>
+                <p>
+                    - Design, develop, and deliver professional-quality oral, written, and visual communications that
+                    are coherent, technically sound, and appropriately adapted to specific audiences and contexts.
+                </p>
 
-                <li>
-                    Develop a security mindset that anticipates adversarial exploits in software architecture and
-                    designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced
+                <p>
+                    - Develop a security mindset that anticipates adversarial exploits in software architecture and
+                    designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and
+                    enhanced
                     security of data and resources.
-                </li>
-
-                <li>
-                    Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in
+                </p>
+                <p>
+                    - Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in
                     computing practices for the purpose of implementing computer solutions that deliver value and
                     accomplish industry-specific goals.
-                </li>
-            </ul>
+                </p>
+            </div>
 
-            <p class="reflection">
-                I found a lot of code from the original work that was either not required or redundant and have been
-                working on cleaning these areas up. The most challenging part was finding an appropriate API for what
-                I'm trying to achieve.
-            </p>
+
+            <!-- Video Block -->
+            <div class="enh-video">
+                <p>Demo</p>
+                <video width="100%" controls>
+                    <source src="./demos/enh1.mp4" type="video/mp4">
+                    **Not Supported**
+                </video>
+            </div>
+
+            <!-- Reflection Block -->
+            <div class="enh-reflection">
+                <p>
+                    I found a lot of code from the original work that was either not required or redundant and have been
+                    working on cleaning these areas up. The most challenging part was finding an appropriate API for
+                    what
+                    I'm trying to achieve.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Enhancement 2 Section: Algorithms and Data Structures -->
+    <section class="enh-container">
+        <h2 class="enh-header">Algorithms and Data Structures</h2>
+        <a href="<!-- INSERT GITHUB LINK -->" class="github-link" target="_blank">View on GitHub</a>
+
+        <div class="enh-grid">
+            <div class="enh-description">
+                <p>
+                    I implemented an optimized search algorithm to handle large data sets of airports effectively.
+                    Additionally, I implemented a cache for search results to further improve speed and responsiveness.
+                    Specifically, I implemented a debounce search with a progressive search filter. Every time a
+                    character is typed (after 3 minimum), the user is presented with a dropdown list of suggestions that
+                    are most
+                    likely to be chosen. I used a trie structure to implement this function. The search operation
+                    involves
+                    traversal of characters based on the input query, one character at a time. The time complexity is
+                    O(M)O(K) on
+                    average, where K is the number of results found.
+                </p>
+
+            </div>
+
+            <!-- Outcomes Block -->
+            <div class="enh-outcomes">
+                <h3>Outcomes:</h3>
+
+                <p>
+                    - Design and evaluate computing solutions that solve a given problem using algorithmic principles
+                    and
+                    computer science practices and standards appropriate to its solution, while managing the
+                    trade-offs
+                    involved in design choices.
+                </p>
+                <p>
+                    - Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in
+                    computing practices for the purpose of implementing computer solutions that deliver value and
+                    accomplish industry-specific goals.
+                </p>
+
+            </div>
+
+            <!-- Video Block -->
+            <div class="enh-video">
+                <p>Demo</p>
+                <video width="100%" controls>
+                    <source src="./demos/enh2.mp4" type="video/mp4">
+                    **Not Supported**
+                </video>
+            </div>
+
+            <!-- Reflection Block -->
+            <div class="enh-reflection">
+                <p class="reflection">
+                    Setting up a search mechanism was quite challenging. I managed to set up a Trie data structure for
+                    my
+                    search but mostly had difficulty implementing progressive filtering for my search engine. I also set
+                    up
+                    other optimization techniques like cache results to further improve performance.
+                </p>
+            </div>
 
         </div>
-    </div>
 
-    <!-- Enh 2 -->
-    <div class="enh-container">
-        <h2>Algorithms and Data Structures</h2>
-    </div>
+    </section>
 
-    <!-- Enh 3 -->
-    <div class="enh-container">
+    <!-- Enhancement 3 Section: Databases -->
+    <section class="enh-container">
         <h2>Databases</h2>
-    </div>
+        <a href="<!-- INSERT GITHUB LINK -->" class="github-link" target="_blank">View on GitHub</a>
+
+        <div class="enh-grid">
+            <div class="enh-description">
+                <p>
+                    The enhancements discussed in the software engineering section require the use of MongoDB in the
+                    backend
+                    of the travel agency website to store customer information. For this enhancement, I completed the
+                    database side of authentication including user login and registration.
+                </p>
+            </div>
+
+            <!-- Outcomes Block -->
+            <div class="enh-outcomes">
+                <h3>Outcomes:</h3>
+                <p>
+                    - Develop a security mindset that anticipates adversarial exploits in software architecture and
+                    designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and
+                    enhanced
+                    security of data and resources.
+                </p>
+                <p>
+                    - Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in
+                    computing practices for the purpose of implementing computer solutions that deliver value and
+                    accomplish industry-specific goals.
+                </p>
+            </div>
+
+
+            <!-- Video Block -->
+            <div class="enh-video">
+                <p>Demo</p>
+                <video width="100%" controls>
+                    <source src="./demos/enh3.mp4" type="video/mp4">
+                    **Not Supported**
+                </video>
+            </div>
+
+            <!-- Reflection Block -->
+            <div class="enh-reflection">
+                <p class="reflection">
+                    I successfully implemented a login, logout, and registration mechanism. The only challenging part
+                    was
+                    figuring out how I could dynamically render contents on the app based on the user's authentication
+                    status. I managed to implement a local strategy, and it seems to work fine.
+                </p>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
